@@ -1,5 +1,6 @@
 package com.jiahaoliuliu.dagger2test.component;
 
+import com.jiahaoliuliu.dagger2test.model.Motor;
 import com.jiahaoliuliu.dagger2test.model.Vehicle;
 import com.jiahaoliuliu.dagger2test.module.VehicleModule;
 
@@ -15,4 +16,6 @@ import dagger.Component;
 public interface VehicleComponent {
 
     Vehicle provideVehicle();
+
+    Motor provideMotor();
 }

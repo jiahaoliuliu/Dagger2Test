@@ -11,6 +11,8 @@ import com.jiahaoliuliu.dagger2test.component.VehicleComponent;
 import com.jiahaoliuliu.dagger2test.model.Vehicle;
 import com.jiahaoliuliu.dagger2test.module.VehicleModule;
 
+import javax.inject.Inject;
+
 /**
  * Simple test of dagger 2.x. The example is based on :
  * http://code.tutsplus.com/tutorials/dependency-injection-with-dagger-2-on-android--cms-23345
