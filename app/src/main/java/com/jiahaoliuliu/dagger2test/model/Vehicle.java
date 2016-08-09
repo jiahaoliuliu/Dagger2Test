@@ -1,30 +1,15 @@
 package com.jiahaoliuliu.dagger2test.model;
 
-import javax.inject.Inject;
-import javax.inject.Singleton;
-
 /**
  * Created by jiahao on 04/08/16.
  */
-@Singleton
-public class Vehicle {
+public interface Vehicle {
 
-    private final Motor motor;
+    void accelerate(int value);
 
-    @Inject
-    public Vehicle(Motor motor) {
-        this.motor = motor;
-    }
+    void stop();
 
-    public void accelerate(int value) {
-        motor.accelerate(value);
-    }
+    int getSpeed();
 
-    public void stop() {
-        motor.breaks();
-    }
-
-    public int getSpeed() {
-        return motor.getRpm();
-    }
+    double accelerateTo100Kmh();
 }

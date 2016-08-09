@@ -12,6 +12,7 @@ import com.jiahaoliuliu.dagger2test.model.Vehicle;
 import com.jiahaoliuliu.dagger2test.module.VehicleModule;
 
 import javax.inject.Inject;
+import javax.inject.Named;
 
 /**
  * Simple test of dagger 2.x. The example is based on :
@@ -19,7 +20,7 @@ import javax.inject.Inject;
  */
 public class MainActivity extends AppCompatActivity {
 
-    @Inject
+    @Inject @Named("TeslaModelS")
     Vehicle vehicle;
 
     private TextView mTextView;
@@ -40,6 +41,6 @@ public class MainActivity extends AppCompatActivity {
         Log.v("Test", "The content of the vehicle is " + vehicle);
 
         mTextView = (TextView) findViewById(R.id.text);
-        mTextView.setText(String.valueOf(vehicle.getSpeed()));
+        mTextView.setText(String.valueOf(vehicle.accelerateTo100Kmh()));
     }
 }
