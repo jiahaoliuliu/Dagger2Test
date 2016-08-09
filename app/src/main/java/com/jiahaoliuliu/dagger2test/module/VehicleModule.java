@@ -11,7 +11,7 @@ import dagger.Provides;
 /**
  * Created by jiahao on 04/08/16.
  */
-@Module
+@Module(includes = Motor.class) // TODO: Check what does includes uses
 public class VehicleModule {
 
 //    @Singleton @Provides

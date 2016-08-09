@@ -19,7 +19,8 @@ import javax.inject.Inject;
  */
 public class MainActivity extends AppCompatActivity {
 
-    private Vehicle vehicle;
+    @Inject
+    Vehicle vehicle;
 
     private TextView mTextView;
 
@@ -33,12 +34,12 @@ public class MainActivity extends AppCompatActivity {
                 // strictly necessary to create it.
 //                .vehicleModule(new VehicleModule())
                 .build();
-        vehicle = component.provideVehicle();
+        // Using field injection instead
+//        vehicle = component.provideVehicle();
+        component.inject(this);
         Log.v("Test", "The content of the vehicle is " + vehicle);
 
         mTextView = (TextView) findViewById(R.id.text);
-
         mTextView.setText(String.valueOf(vehicle.getSpeed()));
-
     }
 }
