@@ -11,16 +11,18 @@ import dagger.Provides;
 /**
  * Created by jiahao on 04/08/16.
  */
-@Module(includes = Motor.class) // TODO: Check what does includes uses
+@Module
 public class VehicleModule {
 
-//    @Singleton @Provides
-//    public Motor provideMotor() {
-//        return new Motor();
-//    }
+    @Singleton
+    @Provides
+    public Motor provideMotor() {
+        return new Motor();
+    }
 
-//    @Singleton @Provides
-//    public Vehicle provideVehicle(Motor motor) {
-//        return new Vehicle(motor);
-//    }
+    @Singleton
+    @Provides
+    public Vehicle provideVehicle(Motor motor) {
+        return new Vehicle(motor);
+    }
 }

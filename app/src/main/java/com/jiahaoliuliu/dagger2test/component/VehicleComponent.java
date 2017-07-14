@@ -16,9 +16,10 @@ import dagger.Component;
 @Component(modules = {VehicleModule.class})
 public interface VehicleComponent {
 
+    // Providers
     Vehicle provideVehicle();
-
     Motor provideMotor();
 
+    // Injections
     void inject(MainActivity mainActivity);
 }
